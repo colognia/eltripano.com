@@ -1,0 +1,526 @@
+/*
+colors:
+yellow: #fcbe57
+logogrün: #095b1b
+*/
+
+:root{
+  font-family: 'Kalam', cursive;
+  --contentcolor: #095b1b;
+  --contentfontsize: 24px;
+  --yellow: #fcbe57;
+  overflow-x: hidden;
+}
+
+body{
+    min-width: 300px;
+    position: relative;
+    background: white;
+    margin: 0px;
+}
+
+.body-short-pages{
+  min-height: 100vh;    /*sonst reicht nicht bis unten, alternativer footer kann nicht unten hingeklebt werden*/
+  position: relative;
+}
+
+.textcenter{
+  text-align: center;
+}
+
+a.textlinks{
+  cursor: pointer;    /*macht zu Händchen*/
+  color: var(--contentcolor);
+}
+
+a.textlinks:visited{
+  color: var(--contentcolor);
+}
+
+.textlinks:hover{
+  text-decoration: underline;
+}
+
+footer{
+  width: 100%;
+  height: auto;
+  padding: 1px; /*gegen margin collapsing von ul*/
+  background-color: var(--yellow);
+}
+
+footer.footer-short-pages{   /*nur für kurze Seiten damit unten klebt. Hängt von
+  alternativem body ab*/
+  position: absolute;
+  bottom: 0px;
+}
+
+footer ul{
+  width: 80%;
+  display: flex;
+  flex-wrap: wrap;
+  margin: 30px auto 30px auto;
+  padding: 0;
+  list-style: none;
+  justify-content: center;
+}
+
+footer li{
+  color: var(--contentcolor);
+  padding: 8px;
+  border-right: 1px solid var(--contentcolor);
+}
+
+footer li:last-of-type{
+  border-right: none;
+}
+
+footer a{
+  text-decoration: none;
+}
+
+footer a:hover{
+  text-decoration: underline;
+}
+
+/*---------------navigation ---------------------*/
+
+header{
+  background: #095b1b;
+  height: 80px;
+  width: 100%;
+  display: flex;      /*2x flex nötig wenn Bild dazu*/
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  justify-content: space-between;
+  box-shadow: 0 0 4px 5px rgba(50, 50, 50, 0.8);
+}
+
+#navbar-toggler{
+  display: none;
+  cursor: pointer;
+  height: min-content;
+  margin: 30px 10px 0 0;
+  cursor: pointer;
+  }
+
+.hamburgerbar{
+    width: 40px;
+    height: 5px;
+    margin-bottom: 8px;
+    background: #fcbe57;
+    border-radius: 15%;
+    transition: .4s;
+}
+
+nav{
+  width: 100%;    /*im Bsp nicht*/
+  }
+
+#logonav{
+  height: 80px; /*wenn 100% wird a-link zu echter Breite in firefox und verschiebt flexbox*/
+}
+
+.nav-liste{
+  display: flex;    /*2x flex nötig*/
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0px;   /*damit oben klebt*/
+  text-decoration: none;
+}
+
+nav a{
+  color: white;
+  text-decoration: none;
+
+}
+
+nav a:visited{
+  color: white;
+}
+
+nav ul li{
+  color: white;
+  font-size: 26px;
+  list-style: none;
+  padding: 20px;
+}
+
+li:hover{
+cursor: pointer;    /*macht zu Händchen*/
+text-shadow: 0 0 8px #D0BFB8;
+text-decoration: underline;
+}
+
+/*------------------ newsticker --------------*/
+#pictogramm{
+    height: 60px;
+    padding-top: 80px;
+    padding: 80px 10px 0 10px;
+}
+
+.aktuelles{
+  display: inline-block;
+  height: 150px;
+}
+
+.aktuell{
+  color: var(--contentcolor);
+  height: 80px;
+  vertical-align: middle;
+  display: inline-block;
+  font-size: 20px;
+  font-family: monospace;
+  margin-left: 10px;
+}
+
+main{
+  padding-top: 20px;  /*stößt sich von oberster Kante ab*/
+}
+/*------------------- homepage -------------------*/
+.topdiv{
+  /* Höhe, breite kommt von childs */
+  margin-top: 10px;
+  display: flex;
+  }
+
+.divleft{
+width: 60%;
+}
+
+#imgleft{
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.divright{
+  width: 40%;
+  height: 500px;
+  background-color: #fcbe57;
+  text-align: center;       /*nicht für Bild, sondern container*/
+}
+
+#logomainpage{
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 40px;
+}
+
+.eltripano{
+  font-family: 'Emilys Candy', cursive;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0 0 8px #095b1ba;
+  color: #095b1b;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0px;
+  padding: 3%;
+  letter-spacing: 10px;
+}
+
+.eltripano_2ndline{
+  font-family: 'Handlee', cursive;
+  font-size: 38px;
+  color: #095b1b;
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 3%;
+}
+
+.textdiv{
+  margin: 0 10%;
+  padding: 20px 0;
+}
+
+.contenttext{
+  color: var(--contentcolor);
+  font-size: var(--contentfontsize);
+}
+
+input#toggle{        /*immer unsichtbar*/
+  display: none;
+}
+
+input#toggle:checked ~ nav .nav-liste {      /*wenn checked, Liste nicht versteckt*/
+        transform: translateY(0);
+  }
+/*-------------- offers -------------------*/
+
+ul.contenttext{
+  line-height: 170%;
+}
+
+
+/* ----------------  about-page ---------------------------             */
+.home{
+  margin-top: 150px;
+  display: inline-block;
+  height: 150px;
+}
+
+.about-container, .contact-container, .mailsent-container, .impressum-container, .offer-container{
+  margin: 140px auto 50px auto;
+  width: 90%;
+  }
+
+.about-1, .about-2, .about-3, .about-4, .about-5{
+  width: 100%;
+  display: flex;
+}
+
+.about-text-content{
+  width: 80%;
+  padding-bottom: 40px;
+  font-size: var(--contentfontsize);
+  color: var(--contentcolor);
+  box-sizing: border-box;
+}
+
+.about-picture-container{
+  width: 20%;
+  padding: 20px;
+  text-align: center;
+}
+
+div .about-picture-container > img{
+  width: 100px;
+}
+
+
+/*------------contact-page----------------------*/
+
+.contactheader{
+  text-align: center;
+  color: var(--contentcolor);
+  margin: -20px 0 10px 0;
+}
+
+.contactstyle{
+  text-align: center;
+}
+
+.formdiv{
+  width: 400px;
+  margin: 0 auto 80px auto;
+}
+
+.formstyle{
+  display: block;
+  width: 100%;
+  color: var(--contentcolor);
+  font-size: 20px;
+  font-family: arial;
+  margin-bottom: 30px;
+  border: 3px solid var(--contentcolor);
+  padding: 5px;
+  box-shadow: 4px 4px 2px 0 #fcbe57;
+}
+
+textarea{
+  display: block;
+  width: 100%;
+  height: 200px;
+  color: var(--contentcolor);
+  font-size: 20px;
+  font-family: arial;
+  border: 3px solid var(--contentcolor);
+  padding: 5px;
+  box-shadow: 4px 4px 2px 0 #fcbe57;
+}
+
+::placeholder{
+  color: rgb(200, 200, 200);
+  font-size: 16px;
+}
+
+button{
+  display: block;
+  width: 50%;
+  color: var(--contentcolor);
+  background: #fcbe57;
+  font-size: 20px;
+  font-family: arial;
+  font-weight: bold;
+  margin: 0 auto 0 auto;
+  border: 2px solid var(--contentcolor);
+  padding: 5px;
+}
+
+figure{
+  margin: 0;
+}
+
+.figcaption_contact{
+  color: var(--contentcolor);
+  font-size: 10px;
+  font-family: arial;
+  margin: 5px 0 30px 0;
+}
+
+.furthercontacts{
+  text-align: center;
+  color: var(--contentcolor);
+  margin: 0 auto 50px auto;
+}
+
+.mail-phone-container{
+  width: 70%;
+  margin: 0 auto 30px auto;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 30px;
+  align-items: center;  /*hier für alle Zellen*/
+}
+
+.contactpics{
+  height: 20px;
+}
+
+p.contenttext{
+  margin: 0;
+}
+
+a.contactlinks{
+  color: var(--contentcolor);
+  text-decoration: none;
+}
+
+a.contactlinks:visited{
+  color: var(--contentcolor);
+}
+
+.ttextlinks:hover{
+  cursor: pointer;
+}
+
+/*-------------------mail-sent---------------------------------------*/
+
+#backtomainpage{
+  color: var(--contentcolor);
+}
+
+#hr-mail-sent{
+  width: 70%;
+  height: 1px;
+  border: 0;
+  background: var(--contentcolor);
+}
+
+.mailsent-container p{
+  text-align: center;
+}
+
+/*--------------------------impressum-------------------------------------*/
+.impressumstyle{
+  text-align: left;
+  font-size: 20px;
+}
+
+/*------------------hamburgermenu-------------------------------------*/
+.navbar-toggler {
+    display: none;
+    cursor: pointer;
+}
+
+label.navbar-toggler img{
+height: 50px;
+width: auto;
+}
+
+/*--------------------------------------- @-media section------------*/
+@media(min-width: 721px) and (max-width: 1200px){
+    nav ul li{
+      font-size: 20px;
+      padding: 15px;
+      }
+}
+
+@media(min-width: 601px) and (max-width: 720px){
+      nav ul li{
+        font-size: 18px;
+        padding: 8px;
+      }
+      .eltripano{
+        font-size: 30px;
+      }
+      .eltripano_2ndline{
+        font-size: 30px;
+      }
+      .textdiv{
+        margin: 0 5%;
+      }
+      .aktuell{
+        font-size: 16px;
+      }
+
+}
+
+@media(min-width: 401px) and (max-width: 600px){
+        nav ul li{
+          font-size: 16px;
+          padding: 15px 4px 0 4px;
+          line-height: 130%;
+        }
+        .eltripano{
+          font-size: 25px;
+        }
+        .eltripano_2ndline{
+          font-size: 20px;
+          margin-top: 5px;
+        }
+        .textdiv{
+          width: 90%;
+          margin: 0 auto;
+        }
+        #logomainpage{
+          width: 150px;
+        }
+        #imgleft{
+          height: 400px;
+        }
+        .divright{
+          height: 400px;
+        }
+        .aktuell{
+          font-size: 12px;
+        }
+        div .about-picture-container > img{
+          width: 50px;
+        }
+        .formdiv{
+          width: 350px;
+}
+
+@media(min-width: 0) and (max-width: 400px){
+  nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav ul li{
+    font-size: 16px;      /*temporär bis menu funzt*/
+    padding: 15px 4px 0 4px;
+    line-height: 130%;
+  }
+  .aktuell{
+    font-size: 12px;
+  }
+  .eltripano{
+    font-size: 25px;
+  }
+  .eltripano_2ndline{
+    font-size: 20px;
+    margin-top: 5px;
+  }
+  #logomainpage{
+    width: 120px;
+  }
+  div .about-picture-container > img{
+    width: 50px;
+  }
+  .formdiv{
+    width: 300px;
+  }
+}

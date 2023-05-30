@@ -1,0 +1,225 @@
+/*
+colors:
+yellow: #fcbe57
+logogrün: #095b1b
+*/
+
+:root{
+  font-family: 'Kalam', cursive;
+  --contentcolor: #095b1b;
+}
+
+body{
+    min-width: 300px;
+    background: white;
+    margin: 0px;
+}
+
+#navbar-toggler{
+  display: none;
+  cursor: pointer;
+  height: min-content;
+  margin: 30px 10px 0 0;
+  cursor: pointer;
+  }
+
+.hamburgerbar{
+  width: 40px;
+  height: 5px;
+  margin-bottom: 8px;
+  background: #fcbe57;
+  border-radius: 15%;
+  transition: .4s;
+}
+
+header{
+  background: #095b1b;
+  height: 80px;
+  width: 100%;
+  display: flex;      /*2x flex nötig wenn Bild dazu*/
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  justify-content: space-between;
+  box-shadow: 0 0 4px 5px rgba(50, 50, 50, 0.8);
+}
+
+/*
+nav{      *blockelement*
+  margin: 0 0 0 auto;     *so nav rechtsbündig*
+}
+*/
+
+nav{
+  width: 100%;    /*im Bsp nicht*/
+}
+
+.nav-liste{
+  display: flex;    /*2x flex nötig*/
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: 0px;   /*damit oben klebt*/
+}
+
+nav ul li{
+  color: white;
+  font-size: 26px;
+  list-style: none;
+  padding: 20px;
+}
+
+#pictogramm{
+    height: 60px;
+    padding-top: 80px;
+}
+
+main{
+  padding-top: 20px;  /*stößt sich von oberster Kante ab*/
+}
+
+li:hover{
+cursor: pointer;    /*macht zu Händchen*/
+text-shadow: 0 0 8px #D0BFB8;
+text-decoration: underline;
+}
+
+.topdiv{
+  /* Höhe, breite kommt von childs */
+  margin-top: 10px;
+  display: flex;
+  }
+
+
+.divleft{
+width: 60%;
+}
+
+#imgleft{
+  height: 500px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.divright{
+  width: 40%;
+  height: 500px;
+  background-color: #fcbe57;
+  text-align: center;       /*nicht für Bild, sondern container*/
+}
+
+#logo{
+  width: 200px;
+  border-radius: 50%;
+  margin-top: 40px;
+}
+
+.eltripano{
+  font-family: 'Emilys Candy', cursive;
+  font-size: 40px;
+  font-weight: bold;
+  text-shadow: 0 0 8px #095b1ba;
+  color: #095b1b;
+  text-align: center;
+  margin-top: 0.5em;
+  margin-bottom: 0px;
+  padding: 3%;
+  letter-spacing: 10px;
+}
+
+.eltripano_2ndline{
+  font-family: 'Handlee', cursive;
+  font-size: 38px;
+  color: #095b1b;
+  margin-top: 15px;
+  margin-bottom: 0;
+  padding: 3%;
+}
+
+.textdiv{
+  margin: 0 10%;
+}
+
+.contenttext{
+  color: var(--contentcolor);
+  font-size: 24px;
+}
+
+
+@media(max-width: 1200px){
+    nav ul li{
+      font-size: 20px;
+      padding: 15px;
+      }
+}
+
+@media(max-width: 760px){
+      nav ul li{
+        font-size: 18px;
+        padding: 8px;}
+      .eltripano{
+        font-size: 30px;
+      }
+      .eltripano_2ndline{
+        font-size: 30px;
+      }
+      .textdiv{
+        margin: 0 5%;
+      }
+}
+
+@media(max-width: 600px){
+        #BilderVideos{
+          ffont-size: 16px;}
+        nav ul li{
+          line-height: 130%;
+        }
+        .eltripano{
+          font-size: 25px;
+        }
+        .eltripano_2ndline{
+          font-size: 25px;
+        }
+        .textdiv{
+          width: 90%;
+          margin: 0 auto;
+        }
+        #logo{
+          width: 120px;
+        }
+        #imgleft{
+          height: 400px;
+        }
+        .divright{
+          height: 400px;
+        }
+}
+
+@media(max-width: 400px){
+  nav {
+    display: flex;
+    justify-content: flex-end;
+  }
+  nav .nav-liste {
+      display: grid;
+      position: absolute;
+      background: var(--contentcolor);
+      width: 100%;
+      top: 80px;  /*soll unter Navbar beginnen*/
+      left: 0;
+      transform: translateY(-150%);   /*100 reicht nicht zum rausschieben*/
+      /* z-index: -1;    unnötig*/
+      transition: .6s;
+      }
+  #navbar-toggler{
+    display: grid !important;   /*nie überschreiben hier, geht auch ohne important*/
+      }
+}
+
+input{        /*immer unsichtbar*/
+  display: none;
+}
+
+input:checked ~ nav .nav-liste {      /*wenn checked, Liste nicht versteckt*/
+        transform: translateY(0);
+  }

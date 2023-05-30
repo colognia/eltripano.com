@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="de">
+<head>
+    <meta charset="utf-8">
+    <title>Eltripano</title>
+    <meta name="author" content="Schmidtconsult IT-services LLC, Frauke Schmidt">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="keywords" content="Mexiko, Yucatán, Yucatan, Reisen, Maya, Zeremonien, Auswandern, Kakao, Kaffee, Ayahuaska, Peyote, Psilocybin, deutsch, persönliche Assistenz, Individualreisen, Izamal, Ausflüge, Taxi, Auto mieten, Übernachten, Hotel, Reiseführer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Emilys+Candy&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <input type="checkbox" id="toggle">
+
+  <header>
+      <input type="checkbox" id="checkboxtoggle">
+        <!-- input muß in gleichem container sein und gleiche Ebene wie nav wegen click-Auswertung -->
+      <a href="http://eltripano.com"><img id="logonav" src="./media/logo/eltripano.jpg" alt="logo Eltripano" title="Homepage ElTripano"></a>
+
+      <nav>
+          <label id="navbar-toggler" for="checkboxtoggle">  <!--*muss ins nav rein-->
+            <img id="navmenupic" src="./media/icons/menu.png">
+            <img id="navcrosspic" src="./media/icons/cross.png">
+          </label>
+          <ul class="nav-liste">
+          <li><a href="./offers.html">Unsere Angebote</a>
+          <li><a href="./about.html">Über uns</a>
+          <li><a href="./contact.html">Kontakt</a>
+          <li>Bilder & Videos
+          <li>Referenzen & Links
+        </ul>
+      </nav>
+  </header>
+
+  <main>
+    <div class="contact-container">
+      <h1 class="contactheader">Kontaktformular</h1>
+      <br>
+      <p class="contenttext contactstyle">Schreibt uns gerne eine Nachricht oder nutzt unsere <a class="textlinks" href="#furthercontacts">weiteren Kontaktmöglichkeiten</a>!</p>
+      <p class="contenttext contactstyle">Ob es um ein konkretes Angebot geht, Fragen oder Kooperationen, wir freuen uns über Eure Kontaktaufnahme.</p>
+      <br><br>
+      <div class="formdiv">
+          <form action="script.php" method="post">
+            <input class="formstyle" type="text" name="name" maxlength="100" required placeholder="Dein Name">
+            <input class="formstyle" type="email" name="mail" maxlength="50" required placeholder="Deine Email">
+            <input class="formstyle" type="text" name="phone" maxlength="20" placeholder="Deine Telefonnummer mit Vorwahl (optional)">
+            <figure>
+              <textarea name="message" maxlength="2000" required placeholder="Deine Nachricht"></textarea>
+              <figcaption class="figcaption_contact">Maximal 2000 Zeichen</figcaption>
+            </figure>
+            <button type="submit" name="submit">Absenden</button>
+          </form>
+      </div>
+      <h1 class="furthercontacts" id="furthercontacts">weitere Kontaktmöglichkeiten</h1>
+      <div class="mail-phone-container">
+        <a href="mailto:hosner@eltripano.com?cc=costa@eltripano.com&cc=IMMOMENT-AKTIV@eclipso.at"><img src="./media/icons/letter-green.png" class="contactpics"></a>
+        <a class="contactlinks" href="mailto:hosner@eltripano.com?cc=costa@eltripano.com&cc=IMMOMENT-AKTIV@eclipso.at"><p class="contenttext"> Email: hosner@eltripano.com, costa@eltripano.com, IMMOMENT-AKTIV@eclipso.at</p></a>
+        <a href="tel:+529988447032"><img src="./media/icons/phone-green.png" class="contactpics"></a>
+        <a class="contactlinks" href="tel:+529988447032"><p class="contenttext">Tel.: +52 998 844 7032</p></a>
+        <img src="./media/icons/mailbox.png" class="contactpics"><p class="contenttext">&#x2022;&nbsp;Postadresse Österreich: IMMOMENT-AKTIV Sport- und Sozialverein, Hammerlweg 62, 4060 Leonding, ÖSTERREICH</br>&#x2022;&nbsp;Postadresse Mexiko: El Tripano, calle 32 x 43 y 45, No.: 337, C.P. 97540 Izamal/ Yucatán, MEXICO></p>
+      </div>
+    </div>
+  </main>
+  <footer>
+    <ul>
+      <li><a href="./offers.html">Unsere Angebote</a></li>
+      <li><a href="./about.html">Über uns</a></li>
+      <li><a href="./contact.html">Kontakt</a></li>
+      <li>Bilder & Videos
+      <li>Referenzen & Links
+      <li><a href="./impressum.html">Impressum</a></li>
+    </ul>
+  </footer>
+</body>

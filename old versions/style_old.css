@@ -1,0 +1,142 @@
+/*
+colors:
+light green #B4CB81
+brown: #905303
+yellow: #F2CB5C
+darker green: #6B9269
+grey: #D0BFB8
+logogrün: rgb 43, 111, 26; #2b6f1a
+*/
+
+body{
+    background: #905303;
+    font-family: 'Kalam', cursive;
+    margin: 0;
+}
+
+header{
+  background: #6B9269;
+  bbackground: #2b6f1a;
+  height: 80px;
+  width: 100%;
+  display: flex;      /*2x flex nötig wenn Bild dazu*/
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  justify-content: space-between;
+  box-shadow: 0 0 10px 8px rgb(100,50,0);
+}
+
+header img{
+  height: 80px;
+  }
+
+nav ul{
+  display: flex;    /*2x flex nötig*/
+  margin: 0;
+  padding: 0;
+  }
+
+nav ul li{
+  color: #F2CB5C;
+  font-size: 25px;
+  list-style: none;
+  padding: 20px;
+  }
+
+
+main{
+  padding-top: 50px;  /*stößt sich von oberster Kante ab*/
+}
+
+li:hover{
+cursor: pointer;    /*macht zu Händchen*/
+text-shadow: 0 0 8px #D0BFB8;
+text-decoration: underline;
+}
+
+.eltripano{
+  font-family: 'Emilys Candy', cursive;
+  font-size: 50px;
+  text-shadow: 0 0 8px #D0BFB8;
+  color: #F2CB5C;
+  text-align: center;
+  margin-top: 1.5em;
+  margin-bottom: 20px;
+  letter-spacing: 10px;
+}
+
+.headerdiv{
+  /* position: relative; */
+  background-image: url("./media/pictures/group/group.jpg");
+  background-size: cover;
+  width: 100%;
+  height: 500px;
+  opacity: 0.7;
+  box-shadow: 0 0 10px 8px rgb(100,50,0);
+  object-fit: cover;
+  margin: 0px auto;
+  padding: 0px;
+}
+
+.imagetext{
+  color: #F2CB5C;
+  text-align: center;
+  padding: 30px 0 ;
+  font-size: 40px;
+  letter-spacing: 5px;
+
+}
+
+@media(max-width: 1000px){
+  .imagetext{font-size: 30px;}
+  }
+
+.textdiv{
+  width: 60%;
+  margin: 0 auto;
+}
+
+@media(max-width: 1200px){
+    nav ul li{
+      font-size: 20px;
+      padding: 15px;
+              }
+      .textdiv{
+        width: 80%;
+                }
+  }
+
+@media(max-width: 850px){
+      nav ul li{
+        font-size: 18px;
+        padding: 8px;}
+    }
+
+@media(max-width: 600px){
+        #BilderVideos{
+          font-size: 16px;}
+        nav ul li{
+          padding: 5px;
+        }
+    }
+
+p{
+  font-size: 28px;
+}
+
+.green {
+color: #B4CB81;
+}
+
+.grey{
+  color: #D0BFB8;
+}
+
+.darkgreen{
+  color: #6B9269;
+}
+
+.yellow{
+  color: #F2CB5C;
+}
