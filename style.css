@@ -43,6 +43,10 @@ a.textlinks:visited{
   text-decoration: underline;
 }
 
+.text-underline{
+  text-decoration: underline;
+}
+
 footer{
   width: 100%;
   height: auto;
@@ -144,7 +148,7 @@ nav ul li{
   padding: 20px;
 }
 
-li:hover{
+nav li:hover{
 cursor: pointer;    /*macht zu Händchen*/
 text-shadow: 0 0 8px #D0BFB8;
 text-decoration: underline;
@@ -264,6 +268,7 @@ input#toggle:checked ~ nav .nav-liste {      /*wenn checked, Liste nicht verstec
 #offers-intro{
   column-width: 12em;
   text-align: justify;
+  margin-bottom: 20px;
 }
 
 #offers-intro>p{
@@ -272,12 +277,78 @@ input#toggle:checked ~ nav .nav-liste {      /*wenn checked, Liste nicht verstec
   padding-bottom: 1em; /*damit Zeilen auf gleicher Höhe bleiben bei Abstand nächster Block*/
 }
 
-ul.contenttext{
-  line-height: 170%;
+summary{
+  padding-bottom: 0.5em;
 }
 
+details p{
+  margin: 0;
+  padding-bottom: 1em;
+}
 
-/* ----------------  about-page ---------------------------             */
+ul.contenttext{
+  line-height: 110%;
+  list-style: none;
+}
+
+ul.contenttext details{
+margin-bottom: 20px;
+}
+
+ul.contenttext p{
+  font-size: 0.8em;
+  line-height: 160%;
+}
+
+.offerheader{
+  background: var(--yellow);
+  font-weight: bold;
+  padding: 10px 8px 8px 8px;
+  margin-bottom: 20px;
+}
+
+.offerdetails{
+  font-size: 0.8em;
+  line-height: 160%;
+  margin-bottom: 20px;
+}
+
+.pricediv{
+  width: 150px;
+  height: 40px;
+  margin-bottom: 25px;
+  background-color: var(--contentcolor);
+  color: var(--yellow);
+  border-radius: 25px;
+  position: relative;
+  text-align: center;
+}
+
+.pricediv span{
+  font-size: 18px;
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+}
+
+.offerlinks{
+  cursor: pointer;
+  color: var(--yellow);
+  text-decoration: none;
+}
+
+.offerlinks a:visited:{
+  text-decoration: none;
+}
+
+details p.text-underline{
+  margin: 0;
+  padding: 0;
+}
+  /* ----------------  about-page ---------------------------             */
 .home{
   margin-top: 150px;
   display: inline-block;
@@ -415,17 +486,13 @@ a.contactlinks:visited{
   color: var(--contentcolor);
 }
 
-.ttextlinks:hover{
-  cursor: pointer;
-}
-
 /*-------------------mail-sent---------------------------------------*/
 
 #backtomainpage{
   color: var(--contentcolor);
 }
 
-#hr-mail-sent{
+#hr-seperator{
   width: 70%;
   height: 1px;
   border: 0;
